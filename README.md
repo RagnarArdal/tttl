@@ -1,4 +1,4 @@
-# TTTL Shop — Astro + Sanity
+# Tæki og Tól Til Leigu — Astro + Sanity
 
 A business storefront built with **Astro** and **Sanity CMS**. Admins can add product photos and descriptions via an embedded Sanity Studio.
 

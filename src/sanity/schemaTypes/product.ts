@@ -22,13 +22,18 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "image",
-      title: "Photo",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-      validation: (rule) => rule.required(),
+      name: "images",
+      title: "Photos",
+      type: "array",
+      of: [
+        {
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+      validation: (rule) => rule.required().min(1),
     }),
     defineField({
       name: "price",
@@ -47,7 +52,7 @@ export default defineType({
   preview: {
     select: {
       title: "name",
-      media: "image",
+      media: "images.0",
       subtitle: "price",
     },
     prepare({ title, media, subtitle }) {
