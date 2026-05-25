@@ -1,0 +1,29 @@
+---
+import Studio from "../../components/Studio";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TTTL Shop — Admin</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+      #studio-root {
+        height: 100vh;
+        width: 100vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="studio-root">
+      <Studio client:only="react" />
+    </div>
+  </body>
+</html>
