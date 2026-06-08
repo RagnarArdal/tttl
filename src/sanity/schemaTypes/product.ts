@@ -59,7 +59,7 @@ export default defineType({
       return {
         title,
         media,
-        subtitle: subtitle ? `$${subtitle}` : "No price",
+        subtitle: subtitle ? `${subtitle.toLocaleString("is-IS")} kr.` : "No price",
       };
     },
   },

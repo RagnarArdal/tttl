@@ -11,6 +11,16 @@ interface Product {
   description: string;
 }
 
+const headings = [
+  "Hvað vantar? ;)",
+  "Hvað eigum við að bralla í dag?",
+  "Tilbúin í næsta verkefni?",
+  "Ekkert mál með rétta tólinu!",
+  "Öss, sjá þessar græjur!",
+  "Leigja fyrst, finna verkefnið næst!",
+];
+const heading = headings[Math.floor(Math.random() * headings.length)];
+
 let products: Product[] = [];
 
 try {
@@ -29,15 +39,12 @@ try {
 }
 ---
 
-<Layout title="Tæki og Tól Til Leigu — Products">
+<Layout title="TTTL">
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="text-center mb-12">
       <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-        Hvaða tæki og tól eru til leigu?
+        {heading}
       </h1>
-      <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-        
-      </p>
     </div>
 
     {products.length === 0 ? (
@@ -61,9 +68,9 @@ try {
                   <div class="carousel-track flex h-full transition-transform duration-300 ease-out">
                     {product.images.map((img: any, i: number) => (
                       <img
-                        src={urlFor(img).width(600).height(600).url()}
+                        src={urlFor(img).width(600).auto("format").url()}
                         alt={`${product.name} — mynd ${i + 1}`}
-                        class="w-full h-full object-cover flex-shrink-0"
+                        class="w-full h-full object-contain flex-shrink-0"
                         data-slide={i}
                         loading="lazy"
                       />
