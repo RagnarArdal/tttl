@@ -28,9 +28,14 @@ const { title } = Astro.props;
           <a href="/" class="text-xl font-bold tracking-tight text-gray-900">
             Tæki og Tól Til Leigu
           </a>
-          <a href="/about" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
-            Um okkur
-          </a>
+          <div class="flex items-center gap-6">
+            <a href="/terms" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+              Skilmálar
+            </a>
+            <a href="/about" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+              Um okkur
+            </a>
+          </div>
         </div>
       </div>
     </nav>
@@ -51,7 +56,7 @@ const { title } = Astro.props;
             <p>Sími: <a href="tel:+3547891234" class="hover:text-gray-900 transition-colors">789-1234</a></p>
           </div>
           <div class="text-center sm:text-right">
-            <p>&copy; {new Date().getFullYear()} Allur réttur áskilinn.</p>
+            <p>&copy; {new Date().getFullYear()} Allur réttur áskilinn</p>
           </div>
         </div>
       </div>
