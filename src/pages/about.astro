@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { SITE } from "../consts";
 ---
 
 <Layout title="TTTL - Um okkur">
@@ -15,9 +16,9 @@ import Layout from "../layouts/Layout.astro";
 
       <h2 class="text-2xl font-semibold text-gray-900 mt-10 mb-4">Hafa samband</h2>
       <ul class="list-none space-y-2 pl-0">
-        <li><span class="font-medium text-gray-900">Eigandi:</span> Tómas Árdal</li>
-        <li><span class="font-medium text-gray-900">Sími:</span> <a href="tel:+3547891234" class="text-blue-600 hover:text-blue-800 transition-colors">789-1234</a></li>
-        <li><span class="font-medium text-gray-900">Staðsetning:</span> 550 Sauðárkrókur</li>
+        <li><span class="font-medium text-gray-900">Eigandi:</span> {SITE.owner}</li>
+        <li><span class="font-medium text-gray-900">Sími:</span> <a href={SITE.phoneHref} class="text-blue-600 hover:text-blue-800 transition-colors">{SITE.phone}</a></li>
+        <li><span class="font-medium text-gray-900">Staðsetning:</span> {SITE.location}</li>
       </ul>
     </div>
   </section>
